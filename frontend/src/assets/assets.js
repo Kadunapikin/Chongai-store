@@ -95,6 +95,13 @@ export const assets = {
     cross_icon
 }
 
+export const navItems = [
+    { label: "HOME", href: "/" },
+    { label: "COLLECTIONS", href: "/collection" },
+    { label: "ABOUT", href: "about" },
+    { label: "CONTACT", href: "contact" },
+  ];  
+
 export const products = [
     {
         _id: "aaaaa",
