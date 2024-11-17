@@ -30,20 +30,23 @@ const Collection = () => {
         }
     }
 
+    const applyFilters = () => {
+        let productsCopy = products.slice();
+        if (category.length > 0) {
+            productsCopy = productsCopy.filter(item => category.includes(item.category));
+        }
+        setFiterProducts(productsCopy);
+    }
+
     useEffect(() => {
         setFiterProducts(products);
         // event.preventDefault();
     }, []);
 
     useEffect(() => {
-        console.log(category);
-        
-    }, [category]);
+        applyFilters();
+    }, [category, subCategory]);
 
-    useEffect(() => {
-        console.log(subCategory);
-        
-    }, [subCategory]);
 
     const showCategory = () => {
         setShowFilter(!showFilter);
