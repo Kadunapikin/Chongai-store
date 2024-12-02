@@ -21,14 +21,14 @@ const App = () => {
       <Routes>
         <Route>
           <Route index path="/" element={<Home />} />
-          <Route index path="/About" element={<About />} />
-          <Route index path="/Cart" element={<Cart />} />
-          <Route index path="/Collection" element={<Collection />} />
-          <Route index path="/Contact" element={<Contact />} />
-          <Route index path="/Login" element={<Login />} />
-          <Route index path="/Orders" element={<Orders />} />
-          <Route index path="/Placeoder" element={<PlaceOrder />} />
-          <Route index path="/Product" element={<Product />} />
+          <Route index path="/about" element={<About />} />
+          <Route index path="/cart" element={<Cart />} />
+          <Route index path="/collection" element={<Collection />} />
+          <Route index path="/contact" element={<Contact />} />
+          <Route index path="/login" element={<Login />} />
+          <Route index path="/orders" element={<Orders />} />
+          <Route index path="/placeoder" element={<PlaceOrder />} />
+          <Route index path="/product/:productId" element={<Product />} />
         </Route>
       </Routes>
       <Footer />
