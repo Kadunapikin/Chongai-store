@@ -5,7 +5,7 @@ import { assets } from '../assets/assets';
 
 const Product = () => {
   const {productId} = useParams();
-  const {products} = useContext(ShopContext);
+  const {products, currency} = useContext(ShopContext);
   const [productData, setProductData] = useState(false);
   const [image, setImage] = useState('');
 
@@ -58,8 +58,9 @@ const Product = () => {
             <img src={assets.star_icon} alt="" className="w-3 5" />
             <img src={assets.star_dull_icon} alt="" className="w-3 5" />
             <p className='pl-2'>(122)</p>
-
           </div>
+          <p className='mt-5 text-3xl font-medium'>{currency}{productData.price}</p>
+          <p>{productData.description}</p>
 
         </div>
       </div>
