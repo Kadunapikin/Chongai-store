@@ -7,12 +7,12 @@ const RelatedProduct = ({category, subCategory}) => {
     const [related, setRelated] = useState([]);
     
     useEffect(() => {
-        if (products.length === 0) {
+        if (products.length > 0) {
             let productsCopy = products.slice();
             productsCopy = productsCopy.filter((item) => category === item.category);
             productsCopy = productsCopy.filter((item) => subCategory === item.subCategory);
 
-            console.log(productsCopy.slice(0, 5));
+            console.log(productsCopy.slice(0,5));
             
         }
     }, []);

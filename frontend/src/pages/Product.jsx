@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext';
 import { assets } from '../assets/assets';
+import RelatedProduct from '../components/RelatedProduct';
 
 const Product = () => {
   const {productId} = useParams();
@@ -14,6 +15,8 @@ const Product = () => {
     products.map((product) => {
       if (product._id === productId) {
         setProductData(product);
+        console.log(productData);
+        
         setImage(product.image[0]);
         return null;
       }
@@ -93,6 +96,9 @@ const Product = () => {
           <p>E-comerce website typically displays different products with their details including prices so that anyone interested can add to their cart and buy</p>
         </div>
       </div>
+
+      {/* --------------- Display related products-------------------- */}
+      <RelatedProduct category={productData.category} subCategory={productData.subCategory} />
     </div>
   ) : <div className='opacity-0'></div>
 }
