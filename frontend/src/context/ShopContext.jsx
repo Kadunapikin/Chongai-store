@@ -34,14 +34,30 @@ const ShopContextProvider = (props) => {
         setCardItems(cartData);
     }
 
-    useEffect(() => {
-        console.log(cardItems);
+    const getCartCount = () => {
+        let totalCount = 0;
+        for (const items in cardItems) {
+            for (const item in cardItems[items]) {
+                try {
+                    if (cardItems[items][item] > 0) {
+                        totalCount += cardItems[items][item];
+                    }
+                } catch (error) {
+                    
+                }
+            }
+        }
+        return totalCount;
+    }
+
+    // useEffect(() => {
+    //     console.log(cardItems);
         
-    }, [cardItems]);
+    // }, [cardItems]);
 
     const value = {
         products , currency , delivery_fee,
-        search, setShowSearch, setSearch, showSearch, cardItems, addToCart
+        search, setShowSearch, setSearch, showSearch, cardItems, addToCart, getCartCount
 
     }
 
