@@ -1,5 +1,6 @@
 import React from 'react'
 import Title from '../components/Title'
+import CartTotal from '../components/CartTotal'
 
 const PlaceOrder = () => {
   return (
@@ -10,7 +11,25 @@ const PlaceOrder = () => {
           <Title text1={'DELIVERY'} text2={'INFORMATION'} />
         </div>
         <div className='flex gap-3'>
-
+          <input className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="text" placeholder='First Name' />
+          <input className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="text" placeholder='Last Name' />
+        </div>
+        <input className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="email" placeholder='Email Address' />
+        <input className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="text" placeholder='Street' />
+        <div className='flex gap-3'>
+          <input className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="text" placeholder='City' />
+          <input className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="text" placeholder='State' />
+        </div>
+        <div className='flex gap-3'>
+          <input className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="number" placeholder='Zipcode' />
+          <input className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="text" placeholder='Country' />
+        </div>
+        <input className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="number" placeholder='Phone No' />
+      </div>
+      {/* ----------------------------Right side--------------------- */}
+      <div className='mt-8'>
+        <div className='mt-8 min-w-80'>
+          <CartTotal />
         </div>
       </div>
 
