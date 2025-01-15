@@ -52,24 +52,6 @@ const ShopContextProvider = (props) => {
         return totalCount;
     }
 
-    // const getCartAmount = () => {
-    //     let totalAmount = 0;
-    
-    //     for (const itemId in cardItems) {
-    //         // Find the product corresponding to the current item ID
-    //         const itemInfo = products.find((product) => product._id === itemId);
-    
-    //         if (itemInfo) {
-    //             // Assume cardItems[itemId] is a quantity, not an object
-    //             const quantity = cardItems[itemId];
-    //             if (quantity > 0) {
-    //                 totalAmount += itemInfo.price * quantity;
-    //             }
-    //         }
-    //     }
-    
-    //     return totalAmount;
-    // };
     
     const getCartAmount = () => {
         let totalAmount = 0;
