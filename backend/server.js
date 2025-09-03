@@ -13,8 +13,13 @@ connectDB();
 connectCloudinary();
 
 // Middleware
+// app.use(cors());
+// app.use(express.json());
+// Middleware
 app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: true })); // Needed for parsing FormData
+
 
 //api end point
 app.use('/api/user', userRouter);
